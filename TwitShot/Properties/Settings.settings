@@ -1,0 +1,24 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="TwitShot.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TwitPicUploadOnly" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://twitpic.com/api/upload</Value>
+    </Setting>
+    <Setting Name="TwitPicUploadPost" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://twitpic.com/api/uploadAndPost</Value>
+    </Setting>
+    <Setting Name="TwitterAPI_VerifyCredentials" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://twitter.com/account/verify_credentials.xml</Value>
+    </Setting>
+    <Setting Name="TwitPicPhotos" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://twitpic.com/photos/</Value>
+    </Setting>
+    <Setting Name="Twitter_ReSendPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Twitter_SignUp" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+  </Settings>
+</SettingsFile>

@@ -1,0 +1,151 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>10.0.20506</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{48D3B60A-4E6C-4B84-B4FE-1E185F399962}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TwitShot</RootNamespace>
+    <AssemblyName>TwitShot</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ApplicationIcon>Resources\twitshot.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API\App.cs" />
+    <Compile Include="API\PasswordString.cs" />
+    <Compile Include="API\Registro.cs" />
+    <Compile Include="API\TwitPic.cs" />
+    <Compile Include="API\WebCam.cs" />
+    <Compile Include="API\WindowsFX.cs" />
+    <Compile Include="GUI\frmCrop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMsg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmMsg.Designer.cs">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\frmProps.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\frmProps.Designer.cs">
+      <DependentUpon>frmProps.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Paint\frmImgEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Paint\frmImgEditor.Designer.cs">
+      <DependentUpon>frmImgEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Paint\Tools\Ellipse.cs" />
+    <Compile Include="GUI\Paint\Tools\Frame.cs" />
+    <Compile Include="GUI\Paint\Tools\IPaintTool.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmMsg.resx">
+      <DependentUpon>frmMsg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\frmProps.resx">
+      <DependentUpon>frmProps.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Paint\frmImgEditor.resx">
+      <DependentUpon>frmImgEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WebCam.png" />
+    <None Include="Resources\Camara.png" />
+    <None Include="Resources\Cortar.png" />
+    <None Include="Resources\Coordenadas.png" />
+    <None Include="Resources\Direccion.png" />
+    <None Include="Resources\Pin.png" />
+    <None Include="Resources\Mensaje.png" />
+    <None Include="Resources\Simbolo.png" />
+    <None Include="Resources\Lapiz.png" />
+    <Content Include="Resources\twitpic-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\twitshot.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
